@@ -4363,7 +4363,7 @@ iframe, object {
 	float: right;
 	width: 18px;
 	height: 18px;
-	background: url('assets/images/android-search.png) no-repeat center center;
+	background: url(assets/images/android-search.png) no-repeat center center;
 	background-size: 18px 18px;
 	font-size: 0;
 	border: none;
