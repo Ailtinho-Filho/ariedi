@@ -1,8 +1,582 @@
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block content %}
 
-    <h1>Ariedi</h1>
+    <!-- Wrapper -->
+    <!--suppress ALL -->
+    <div class="wrapper">
+
+        <!-- Section Started -->
+        <div class="section started" id="section-started">
+
+            <!-- background -->
+            <div class="video-bg jarallax" style="background-image: url('images/retro3.jpg');">
+                <div class="video-bg-mask"></div>
+                <div class="video-bg-texture" id="grained_container"></div>
+            </div>
+
+            <!-- started content -->
+            <div class="centrize full-width">
+                <div class="vertical-center">
+                    <div class="started-content">
+                        <h1 class="h-title">
+                            Hello, I’m <strong>John Ariedi</strong>, Organizational Intelligence Manager and <br />
+                            Pyrthon Developer based in Brazil.
+                        </h1>
+                        <div class="h-subtitle typing-subtitle">
+                            <p>I code cool <strong>data pipelines</strong></p>
+                            <p>I develop <strong> ETL processes</strong></p>
+                            <p>I love <strong>Python Programming</strong></p>
+                        </div>
+                        <span class="typed-subtitle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mosue button -->
+            <a href="#" class="mouse_btn" style="display: none;"><span class="icon fas fa-chevron-down"></span></a>
+
+        </div>
+
+        <!-- Section About -->
+        <div class="section about" id="section-about">
+
+            <!-- title -->
+            <div class="title">
+                <div class="title_inner">About</div>
+            </div>
+
+            <div class="content content-box">
+
+                <!-- image -->
+                <div class="image">
+                    <img src={% static "images/man2.jpg" %} alt="" />
+                </div>
+
+                <!-- desc -->
+                <div class="desc">
+                    <p>Hello! I’m John Ariedi. A Python developer from São Paulo, Brazil. Fascinated by the process of data collection, transformation, and load. I believe that information transforms people and I like to think that we'll have an increasingly prosperous society as information is free.</p>
+                    <div class="info-list">
+                        <ul>
+                            <li><strong>Age:</strong> 31</li>
+                            <li><strong>Residence:</strong> BRA</li>
+                            <li><strong>Freelance:</strong> Available</li>
+                            <li><strong>Address:</strong> Bauru, São Paulo, Brazil</li>
+                            <li><strong>Phone:</strong> +55 14 9 98189 52 29</li>
+                            <li><strong>E-mail:</strong> joaoariedi@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- Section Service -->
+        <div class="section service" id="section-services">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Services</div>
+                </div>
+
+                <!-- service items -->
+                <div class="service-items">
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-database"></span></div>
+                            <div class="name">ETL Development</div>
+                            <div class="text">An information logistics framework for delivering the right information to the right people.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-lightbulb"></span></div>
+                            <div class="name">Data Mining</div>
+                            <div class="text">Use data insights to recommend and to help making intelligent decisions across teams.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-chart-bar"></span></div>
+                            <div class="name">Data Analytics</div>
+                            <div class="text">Help all company areas to define and track the right metrics to reach their business goals.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-compass"></span></div>
+                            <div class="name">Consulting</div>
+                            <div class="text">Help you measure everything along our operating pipeline and analyze data.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- Section Pricing -->
+        <div class="section pricing" id="section-pricing">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Pricing Table</div>
+                </div>
+
+                <!-- pricing items -->
+                <div class="pricing-items">
+
+                    <div class="pricing-col">
+                        <div class="pricing-item content-box">
+                            <div class="icon">
+                                <span class="fas fa-star"></span>
+                            </div>
+                            <div class="name">Basic</div>
+                            <div class="amount">
+                                <span class="number">
+                                    <span class="dollar">R$</span>
+                                    <span>59</span>
+                                    <span class="period">hour</span>
+                                </span>
+                            </div>
+                            <div class="feature-list">
+                                <ul>
+                                    <li>Consulting</li>
+                                    <li>Data Mining</li>
+                                    <li class="disable">Data Analytics</li>
+                                    <li class="disable">ETL Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-col">
+                        <div class="pricing-item content-box">
+                            <div class="icon">
+                                <span class="fas fa-rocket"></span>
+                            </div>
+                            <div class="name">Premium</div>
+                            <div class="amount">
+                                <span class="number">
+                                    <span class="dollar">R$</span>
+                                    <span>119</span>
+                                    <span class="period">hour</span>
+                                </span>
+                            </div>
+                            <div class="feature-list">
+                                <ul>
+                                    <li>Consulting</li>
+                                    <li>Data Mining</li>
+                                    <li>Data Analytics</li>
+                                    <li>ETL Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section Resume -->
+        <div class="section resume" id="section-history">
+            <div class="content">
+                <div class="cols">
+
+                    <div class="col col-md">
+
+                        <!-- title -->
+                        <div class="title">
+                            <div class="title_inner">Experience</div>
+                        </div>
+
+                        <!-- resume items -->
+                        <div class="resume-items">
+
+                            <div class="resume-item content-box active">
+                                <div class="date">2018 - Present</div>
+                                <div class="name">Organizational Intelligence Coordinator - Scaffold Education</div>
+                                <div class="text">In charge of the intelligence department that deals with strategic intelligence, competitiveness and information logistics.</div>
+                            </div>
+
+                            <div class="resume-item content-box">
+                                <div class="date">2016 - 2016</div>
+                                <div class="name">Main Researcher - The São Paulo Research Foundation</div>
+                                <div class="text">Innovation Research Project that supports technology development for small businesses. We work with the development of a distributed network of probes for environmental data collection in hard-to-reach locations.</div>
+                            </div>
+
+                            <div class="resume-item content-box">
+                                <div class="date">2013 - 2016</div>
+                                <div class="name">Co-Founder &amp; COO - Eletrize Technology and Education</div>
+                                <div class="text">Startup of technology development for education founded with the purpose of changing the learning experience, we initially built a platform for adaptive learning applying gamification to the study for the college apply tests. We use Item Response Theory to gauge questions at user levels.</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col col-md">
+
+                        <!-- title -->
+                        <div class="title">
+                            <div class="title_inner">Education</div>
+                        </div>
+
+                        <!-- resume items -->
+                        <div class="resume-items">
+
+                            <div class="resume-item content-box active">
+                                <div class="date">2018 - Present</div>
+                                <div class="name">Industrial Engineering - São Paulo State University, UNESP</div>
+                                <div class="text">Focused in organizational intelligence, a new concept that encompasses business, strategic and competitive intelligence and knowledge management.</div>
+                            </div>
+
+                            <div class="resume-item content-box">
+                                <div class="date">2010 - 2013</div>
+                                <div class="name">Physics Degree - São Paulo State University, UNESP</div>
+                                <div class="text">Technology for education and Astronomy, but I interrupt the course to create my first startup</div>
+                            </div>
+
+                            <div class="resume-item content-box">
+                                <div class="date">2018 - 2018</div>
+                                <div class="name">The Analytics Edge - Massachusetz Institute of Technology, MIT</div>
+                                <div class="text">Real-world examples in which quantitative methods provide a significant competitive edge that has led to a first order impact on some of today's most important companies. Sloan School of Management, OCW.</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Main Skills -->
+        <div class="section skills" id="section-skills">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Main Skills</div>
+                </div>
+
+                <!-- skills items -->
+                <div class="skills percent content-box">
+                    <ul>
+                        <li>
+                            <div class="name">Data analytics</div>
+                            <div class="progress ">
+                                <div class="percentage" style="width: 80%;">
+                                    <span class="percent">80%</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">ETL</div>
+                            <div class="progress ">
+                                <div class="percentage" style="width: 70%;">
+                                    <span class="percent">70%</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Backend Development</div>
+                            <div class="progress ">
+                                <div class="percentage" style="width: 75%;">
+                                    <span class="percent">75%</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Project Management</div>
+                            <div class="progress ">
+                                <div class="percentage" style="width: 85%;">
+                                    <span class="percent">85%</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section Languages Skills -->
+        <div class="section skills" id="section-skills-lang">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Languages Skills</div>
+                </div>
+
+                <!-- skills items -->
+                <div class="skills dotted content-box">
+                    <ul>
+                        <li>
+                            <div class="name">English</div>
+                            <div class="progress">
+                                <div class="percentage" style="width: 90%;">
+                                    <span class="percent">90%</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Portuguese</div>
+                            <div class="progress">
+                                <div class="percentage" style="width: 95%;">
+                                    <span class="percent">95%</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Spanish</div>
+                            <div class="progress">
+                                <div class="percentage" style="width: 25%;">
+                                    <span class="percent">25%</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Chinese</div>
+                            <div class="progress">
+                                <div class="percentage" style="width: 15%;">
+                                    <span class="percent">15%</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section Coding Skills -->
+        <div class="section skills" id="section-skills-code">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Coding Skills</div>
+                </div>
+
+                <!-- skills items -->
+                <div class="skills circles content-box">
+                    <ul>
+                        <li>
+                            <div class="name">Python</div>
+                            <div class="progress p90"> <!-- p90 = 90% circle fill color -->
+                                <div class="percentage">
+                                    <span class="percent">90%</span>
+                                </div>
+                                <span>90%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Pandas</div>
+                            <div class="progress p75"> <!-- p75 = 75% circle fill color -->
+                                <div class="percentage">
+                                    <span class="percent">75%</span>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">Django</div>
+                            <div class="progress p85"> <!-- p85 = 85% circle fill color -->
+                                <div class="percentage">
+                                    <span class="percent">85%</span>
+                                </div>
+                                <span>85%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">API</div>
+                            <div class="progress p75"> <!-- p95 = 95% circle fill color -->
+                                <div class="percentage">
+                                    <span class="percent">75%</span>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section Knowladge Skills -->
+        <div class="section skills" id="section-skills-know">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Knowledge</div>
+                </div>
+
+                <!-- skills -->
+                <div class="skills list content-box">
+                    <ul>
+                        <li>
+                            <div class="name">Data Visualization</div>
+                        </li>
+                        <li>
+                            <div class="name">Data mining</div>
+                        </li>
+                        <li>
+                            <div class="name">Crawler development</div>
+                        </li>
+                        <li>
+                            <div class="name">Pipeline management using Luigi</div>
+                        </li>
+                        <li>
+                            <div class="name">Digital Ocean deploy</div>
+                        </li>
+                        <li>
+                            <div class="name">Heroku deploy</div>
+                        </li>
+                        <li>
+                            <div class="name">AWS Services - RDS, EC2 and EB</div>
+                        </li>
+                        <li>
+                            <div class="name">Digital Marketing Analytics</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section Interests -->
+        <div class="section service" id="section-interests">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Interests</div>
+                </div>
+
+                <!-- interests items -->
+                <div class="service-items">
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-tools"></span></div>
+                            <div class="name">Digital Fabrication</div>
+                            <div class="text">I co-founded a FabLab in my city named Aeon to spread knowledge about digital fabrication and Maker culture.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-cocktail"></span></div>
+                            <div class="name">Cook</div>
+                            <div class="text">Now I'm in a challange to make 100 different recepies in 100 sundays.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-gamepad"></span></div>
+                            <div class="name">Games</div>
+                            <div class="text">I'm always looking for a new real time strategy game to test, and I love Don't Starve Together.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-guitar"></span></div>
+                            <div class="name">Music</div>
+                            <div class="text">A classical guitar student, I love playing with my friends and make new songs.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- Section Custom Text -->
+        <div class="section custom-text" id="section-custom-text">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Motivation</div>
+                </div>
+
+                <!-- clients items -->
+                <div class="content-box">
+                    <div class="single-post-text">
+                        <p>
+                            My primary goal is help to build a fairer culture that values ​​diversity, focusing on human development to deliver results that impact communities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- Section Contacts Info -->
+        <div class="section contacts" id="section-contacts">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Contacts</div>
+                </div>
+
+                <!-- contacts items -->
+                <div class="service-items">
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-phone"></span></div>
+                            <div class="name">Phone</div>
+                            <div class="text">+55 14 9 8189 52 29</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-envelope"></span></div>
+                            <div class="name">Email</div>
+                            <div class="text"><a href="mailto:joaoariedi@gmail.com">joaoariedi@gmail.com</a></div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-map-marker-alt"></span></div>
+                            <div class="name">Address</div>
+                            <div class="text">Bauru, São Paulo, Brazil</div>
+                        </div>
+                    </div>
+
+                    <div class="service-col">
+                        <div class="service-item content-box">
+                            <div class="icon"><span class="fas fa-user-tie"></span></div>
+                            <div class="name">Freelance Available</div>
+                            <div class="text">I am available for Freelance hire</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
 
 {% endblock content %}

@@ -1,23 +1,52 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 
 <!-- Head -->
 {% include 'includes/_header.html' %}
 
-<body>
+<body class="home">
 
-<!-- Navbar -->
-{% include 'includes/_navbar.html' %}
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<!--Main Content Start -->
-{% block content %}
-{% endblock content %}
-<!-- Main Content Ends -->
+	<!-- Container -->
+	<div class="container">
 
-<!-- Footer -->
-{% include 'includes/_footer.html' %}
+		<!-- Cursor -->
+		<div class="cursor-follower"></div>
+
+        <!-- Navbar -->
+        {% include 'includes/_navbar.html' %}
+
+        <!--Main Content Start -->
+        {% block content %}
+        {% endblock content %}
+        <!-- Main Content Ends -->
+
+        <!-- Footer -->
+        {% include 'includes/_footer.html' %}
+
+        <!-- Lines -->
+		<div class="lines">
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+		</div>
+
+    </div>
 </body>
 
 </html>
