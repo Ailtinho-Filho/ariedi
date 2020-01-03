@@ -1,6 +1,7 @@
 venv
 .venv
 staticfiles
+mediafiles
 *.env
 getting-started/*
 *.idea
