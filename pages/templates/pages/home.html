@@ -575,6 +575,49 @@
                 <div class="clear"></div>
             </div>
         </div>
+
+        <!-- Section Contacts Form -->
+        <div class="section contacts" id="section-contacts-form">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Let's Talk</div>
+                </div>
+
+                <!-- form -->
+                <div class="contact_form content-box">
+                    <form id="" method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="group-val">
+                            <input type="text" name="name" placeholder="Name" />
+                        </div>
+                        <div class="group-val">
+                            <input type="email" name="email" placeholder="Email" />
+                        </div>
+                        <div class="group-val ct-gr">
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="group-bts">
+                            <button type="submit" class="btn hover-animated">
+                                <span class="circle"></span>
+                                <span class="lnk">Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                    {% if messages %}
+                    <div class="alert-{{ message.tags }}">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
     </div>
 
 {% endblock content %}
