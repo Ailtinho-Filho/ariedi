@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 
+from category.models import Category
 from projects.models import Project
 
 
@@ -15,6 +16,7 @@ class Home(TemplateView):
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         context['projects'] = Project.objects.all()
+        context['categories'] = Category.objects.all()
         return context
 
 

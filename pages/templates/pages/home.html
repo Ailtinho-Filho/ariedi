@@ -469,12 +469,11 @@
                         <div class="btn-group">
                             <label data-text="All" class="glitch-effect"><input type="radio" name="fl_radio" value=".box-item" />All</label>
                         </div>
+                        {% for category in categories %}
                         <div class="btn-group">
-                            <label data-text="Maker"><input type="radio" name="fl_radio" value=".f-Maker" />Maker</label>
+                            <label data-text={{ category.name }}><input type="radio" name="fl_radio" value=".f-{{ category.name }}" />{{ category.name }}</label>
                         </div>
-                        <div class="btn-group">
-                            <label data-text="Software"><input type="radio" name="fl_radio" value=".f-Software" />Software</label>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
 
@@ -482,7 +481,7 @@
                 <!-- portfolio items -->
                 <div class="box-items portfolio-items">
                     {% for project in projects %}
-                        <div class="box-item f-{{ project.category }}">
+                        <div class="box-item {%  for category in project.category.all %} f-{{ category }} {% endfor %}">
                         <div class="image">
                             <a href="#popup-{{ project.id }}" class="has-popup-media hover-animated">
                                 <img class="wp-post-image" src={{ project.image.url }}  alt="" />
@@ -491,7 +490,7 @@
                                         <span class="vertical-center">
                                             <span class="icon fas fa-plus"></span>
                                             <span class="desc">
-                                                <span class="category">{{ project.category }}</span>
+                                                <span class="category">{%  for category in project.category.all %} #{{ category }} {% endfor %}</span>
                                                 <span class="name">{{ project.title }}</span>
                                             </span>
                                         </span>
@@ -503,16 +502,17 @@
                             <div class="content">
                                 <div class="image" style="background-image: url({{ project.image.url }});"></div>
                                 <div class="desc single-post-text">
-                                    <div class="category">{{ project.category }}</div>
+                                    <div class="category">{%  for category in project.category.all %} #{{ category }} {% endfor %}</div>
                                     <h4>{{ project.title }}</h4>
                                     <p>
                                         {{ project.content | safe }}
                                     </p>
-
+                                    {% if project.link %}
                                     <a class="btn hover-animated" href={{ project.link }} >
                                         <span class="circle"></span>
                                         <span class="lnk">View Project</span>
                                     </a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

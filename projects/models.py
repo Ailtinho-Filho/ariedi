@@ -1,8 +1,10 @@
 from django.db import models
 
+from category.models import Category
+
 
 class Project(models.Model):
-    category = models.CharField(max_length=50)
+    category = models.ManyToManyField(Category)
     title = models.CharField(max_length=100)
     content = models.TextField()
     image = models.ImageField(blank=True)
