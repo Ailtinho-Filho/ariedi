@@ -15,7 +15,7 @@ class Project(models.Model):
 
     class Meta:
         verbose_name_plural = "Projects"
-        ordering = ['score']
+        ordering = ['-score']
 
     def __str__(self):
         return self.title
