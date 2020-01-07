@@ -22,7 +22,7 @@
                 <div class="vertical-center">
                     <div class="started-content">
                         <h1 class="h-title">
-                            Hello, I’m <strong>John Ariedi</strong>, Organizational Intelligence Manager and <br />
+                            Hello, I’m <strong>John Ariedi</strong>, Organizational Intelligence Manager and <br>
                             Python Developer based in Brazil.
                         </h1>
                         <div class="h-subtitle typing-subtitle">
@@ -398,7 +398,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="name">Django REST Framework</div>
+                            <div class="name">DRF</div>
                             <div class="progress p75"> <!-- p95 = 95% circle fill color -->
                                 <div class="percentage">
                                     <span class="percent">75%</span>
@@ -451,6 +451,77 @@
                     </ul>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Works -->
+        <div class="section works" id="section-portfolio">
+            <div class="content">
+
+                <!-- title -->
+                <div class="title">
+                    <div class="title_inner">Projects</div>
+                </div>
+
+                <!-- portfolio filter -->
+                <div class="filter-menu content-box">
+                    <div class="filters">
+                        <div class="btn-group">
+                            <label data-text="All" class="glitch-effect"><input type="radio" name="fl_radio" value=".box-item" />All</label>
+                        </div>
+                        {% for category in categories %}
+                        <div class="btn-group">
+                            <label data-text={{ category.name }}><input type="radio" name="fl_radio" value=".f-{{ category.name }}" />{{ category.name }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+                <!-- portfolio items -->
+                <div class="box-items portfolio-items">
+                    {% for project in projects %}
+                        <div class="box-item {%  for category in project.category.all %} f-{{ category }} {% endfor %}">
+                        <div class="image">
+                            <a href="#popup-{{ project.id }}" class="has-popup-media hover-animated">
+                                <img class="wp-post-image" src={{ project.image.url }}  alt="" />
+                                <span class="info circle">
+                                    <span class="centrize full-width">
+                                        <span class="vertical-center">
+                                            <span class="icon fas fa-plus"></span>
+                                            <span class="desc">
+                                                <span class="category">{%  for category in project.category.all %} #{{ category }} {% endfor %}</span>
+                                                <span class="name">{{ project.title }}</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="popup-{{ project.id }}" class="popup-box mfp-fade mfp-hide">
+                            <div class="content">
+                                <div class="image" style="background-image: url({{ project.image.url }});"></div>
+                                <div class="desc single-post-text">
+                                    <div class="category">{%  for category in project.category.all %} #{{ category }} {% endfor %}</div>
+                                    <h4>{{ project.title }}</h4>
+                                    <p>
+                                        {{ project.content | safe }}
+                                    </p>
+                                    {% if project.link %}
+                                    <a class="btn hover-animated" href={{ project.link }} >
+                                        <span class="circle"></span>
+                                        <span class="lnk">View Project</span>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+                <div class="clear"></div>
             </div>
         </div>
 
@@ -566,7 +637,7 @@
                         <div class="service-item content-box">
                             <div class="icon"><span class="fas fa-user-tie"></span></div>
                             <div class="name">Freelance Available</div>
-                            <div class="text">I am available for Freelance hire</div>
+                            <div class="text">I'm available for freelance part-time hiring.</div>
                         </div>
                     </div>
 
