@@ -15,7 +15,7 @@ class Home(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
-        context['projects'] = Project.objects.all()
+        context['projects'] = Project.objects.filter(active=True)
         context['categories'] = Category.objects.all()
         return context
 
