@@ -443,7 +443,7 @@
                             <div class="name">Heroku deploy</div>
                         </li>
                         <li>
-                            <div class="name">AWS Services - RDS, EC2 and EB</div>
+                            <div class="name">AWS Services - RDS, EC2, S3 and EB</div>
                         </li>
                         <li>
                             <div class="name">Digital Marketing Analytics</div>
@@ -484,7 +484,7 @@
                         <div class="box-item {%  for category in project.category.all %} f-{{ category }} {% endfor %}">
                         <div class="image">
                             <a href="#popup-{{ project.id }}" class="has-popup-media hover-animated">
-                                <img class="wp-post-image" src={%  if project.image.url %} {{ project.image.url }} {% else %} {% static 'images/project_default.png' %} {% endif %}  alt="" />
+                                <img class="wp-post-image" src={{ project.image.url }} alt="" />
                                 <span class="info circle">
                                     <span class="centrize full-width">
                                         <span class="vertical-center">
