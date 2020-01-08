@@ -8,7 +8,7 @@ class Project(models.Model):
     score = models.PositiveIntegerField(blank=True, null=True, default=1)
     title = models.CharField(max_length=100)
     content = models.TextField()
-    image = models.ImageField(blank=True)
+    image = models.ImageField(default='project_default.png', upload_to='project_images')
     link = models.URLField(blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     active = models.BooleanField(default=True)
