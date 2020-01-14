@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import redirect
@@ -36,4 +37,3 @@ def contact(request):
         messages.success(request, 'Thanks, your message is sent successfully.')
 
     return redirect('home')
-
