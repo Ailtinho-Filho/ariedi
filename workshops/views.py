@@ -12,6 +12,6 @@ class WorkshopDetail(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
-        context['workshop'] = Workshop.objects.filter(active=True)
-        context['images'] = WorkshopImage.objects.all()
+        context['workshop'] = Workshop.objects.first()
+        context['workshop_images'] = WorkshopImage.objects.filter(workshop_id=context['workshop'].id)
         return context

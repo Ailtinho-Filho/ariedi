@@ -21,7 +21,8 @@ class Home(TemplateView):
         return context
 
 
-# TODO: Change to FormView template and place the alert msgs on top of the page
+# FIXME: Change to FormView template and place the alert msgs on top of the page
+# TODO: Jquery to post message
 def contact(request):
     if request.method == 'POST':
         name = request.POST['name']

@@ -7,7 +7,7 @@
 
         <!-- logo -->
         <div class="logo hover-masks-logo">
-            <a href="#">
+            <a href={% url 'home' %}>
                 <span class="mask-lnk">John <strong>Ariedi</strong></span>
                 <span class="mask-lnk mask-lnk-hover">João <strong>Ariedi</strong></span>
             </a>
@@ -18,6 +18,7 @@
             <div class="top-menu-nav">
                 <div class="menu-topmenu-container">
                     <ul class="menu">
+                        {% if request.path == '/' %}
                         <li class="menu-item current-menu-item">
                             <a href="#section-started">Home</a>
                         </li>
@@ -36,6 +37,7 @@
                         <li class="menu-item">
                             <a href="#section-contacts">Contact</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
