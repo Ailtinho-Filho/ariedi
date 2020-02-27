@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Section Started -->
+        <div class="section started layout-creative" id="section-started">
+
+            <!-- background -->
+            <div class="video-bg">
+                <div class="video-bg-mask"></div>
+                <div class="video-bg-texture" id="grained_container"></div>
+            </div>
+
+            <!-- started content -->
+            <div class="centrize full-width">
+                <div class="vertical-center">
+                    <div class="started-content">
+                        <h1 class="h-title">{{ workshop.title }}</h1>
+                        <div class="h-subtitles">
+                            <div class="h-subtitle typing-bread">
+                                <p class="breadcrumbs">
+                                    <a href={% url 'home' %}>Home</a> / Oficina de contrução de telescópio
+                                </p>
+                            </div>
+                            <span class="typed-bread"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mosue button -->
+            <a href="#" class="mouse_btn" style="display: none;"><span class="icon fas fa-chevron-down"></span></a>
+
+        </div>
+
+        <!-- Work Single -->
+        <div class="section blog">
+            <div class="content content-box">
+                <div class="single-post-text">
+
+                    <!-- portfolio content -->
+                    <div class="portfolio-info portfolio-cols">
+                        <div class="description-col">
+
+                            <!-- title -->
+                            <div class="title">
+                                <div class="title_inner">Descrição</div>
+                            </div>
+
+                            <!-- text -->
+                            <div class="single-post-text">
+
+                                {{ workshop.description | safe }}
+
+
+                                {% if workshop.link %}
+                                <a class="btn hover-animated" href={{ workshop.link }} >
+                                    <span class="circle"></span>
+                                    <span class="lnk">Projeto completo</span>
+                                </a>
+                                {% endif %}
+
+                                <!-- gallery -->
+                                <div class="gallery-item">
+                                    {% for workshop_image in workshop_images %}
+                                    <p>
+                                        <a href={{ workshop_image.image.url }}>
+                                            <img alt="" src={{ workshop_image.image.url }}/>
+                                        </a>
+                                    </p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="details-col">
+
+                            <!-- title -->
+                            <div class="title">
+                                <div class="title_inner">Detalhes</div>
+                            </div>
+
+                            <!-- details -->
+                            <ul class="details-list">
+                                <li><strong>Categorias</strong> {{ workshop.category.first }}</li>
+                                <li><strong>Idade</strong> {{ workshop.age }}</li>
+                                <li><strong>Público</strong> {{ workshop.public }}</li>
+                                <li><strong>Custo</strong> R$ {{ workshop.value }}</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -42,6 +42,7 @@ LOCAL_APPS = [
     "pages",
     "projects",
     "category",
+    "workshops",
 ]
 
 THIRD_PARTY_APPS = [
