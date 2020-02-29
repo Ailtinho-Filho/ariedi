@@ -28,4 +28,6 @@ def get_image_filename(instance, filename):
 
 class WorkshopImage(models.Model):
     workshop = models.ForeignKey(Workshop, null=True, blank=True, default=None, on_delete=models.SET_NULL)
-    image = models.ImageField(upload_to=get_image_filename, verbose_name='Image')
+    image = models.ImageField(upload_to=get_image_filename)
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+

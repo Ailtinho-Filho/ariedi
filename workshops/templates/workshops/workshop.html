@@ -67,10 +67,10 @@
 
                                 <!-- gallery -->
                                 <div class="gallery-item">
-                                    {% for workshop_image in workshop_images %}
+                                    {% for workshop_image in workshop.workshopimage_set.all %}
                                     <p>
                                         <a href={{ workshop_image.image.url }}>
-                                            <img alt="" src={{ workshop_image.image.url }}/>
+                                            <img alt="workshop images" src={{ workshop_image.image.url }}/>
                                         </a>
                                     </p>
                                     {% endfor %}
